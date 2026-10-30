@@ -128,6 +128,15 @@
   document.querySelectorAll('.np-dp').forEach(function (el) { pickers.push(new Picker(el)); });
   document.addEventListener('click', function () { closeAllPickers(); });
 
+  /* ---------- Prefill destination from ?destination= ---------- */
+  try {
+    var dest = new URLSearchParams(location.search).get('destination');
+    if (dest) {
+      document.querySelectorAll('input[name="Destination"]').forEach(function (i) { if (!i.value) i.value = dest; });
+      document.querySelectorAll('form.np-form').forEach(function (f) { f.setAttribute('data-subject', (f.getAttribute('data-subject') || 'Request') + ' (' + dest + ')'); });
+    }
+  } catch (e) {}
+
   /* ---------- Forms ---------- */
   var ENDPOINT = window.NP_FORM_ENDPOINT || '';
   document.querySelectorAll('form.np-form').forEach(function (f) {
