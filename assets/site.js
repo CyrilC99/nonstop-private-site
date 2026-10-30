@@ -138,10 +138,11 @@
   } catch (e) {}
 
   /* ---------- Forms ---------- */
-  var ENDPOINT = window.NP_FORM_ENDPOINT || '';
+  var ENDPOINT = window.NP_FORM_ENDPOINT || 'https://formsubmit.co/ajax/contact@nonstop-private.com';
   document.querySelectorAll('form.np-form').forEach(function (f) {
     var btn = f.querySelector('button.np-send');
     if (!btn) return;
+    btn.setAttribute('data-label', btn.textContent);
     btn.addEventListener('click', function () {
       if (!ENDPOINT) {
         var lines = [];
@@ -149,8 +150,15 @@
         window.location.href = 'mailto:contact@nonstop-private.com?subject=' + encodeURIComponent(f.getAttribute('data-subject') || 'Request') + '&body=' + encodeURIComponent(lines.join('\n'));
         return;
       }
+      var filled = 0;
+      f.querySelectorAll('input[name], textarea[name]').forEach(function (i) { if (!i.disabled && i.value && i.type !== 'hidden') filled++; });
+      if (!filled) { btn.textContent = 'Please fill in the form'; setTimeout(function () { btn.textContent = btn.getAttribute('data-label'); }, 2500); return; }
       var data = new FormData(f);
+      f.querySelectorAll('input:disabled, textarea:disabled').forEach(function (i) { data.delete(i.name); });
       data.append('_subject', f.getAttribute('data-subject') || 'New request');
+      data.append('_template', 'table');
+      data.append('_captcha', 'false');
+      data.append('Page', location.href);
       btn.disabled = true; btn.textContent = 'Sending…';
       fetch(ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
         .then(function (r) { if (!r.ok) throw 0; f.innerHTML = '<p style="grid-column: 1 / -1; margin: 0; font-family: Cinzel, serif; font-size: 22px; letter-spacing: .04em; color: #CDB07A">Thank you. We will be in touch very shortly.</p>'; })
