@@ -1,1 +1,15 @@
-{sitemap}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://nonstop-private.com/</loc></url>
+  <url><loc>https://nonstop-private.com/services.html</loc></url>
+  <url><loc>https://nonstop-private.com/destinations.html</loc></url>
+  <url><loc>https://nonstop-private.com/dubai.html</loc></url>
+  <url><loc>https://nonstop-private.com/mykonos.html</loc></url>
+  <url><loc>https://nonstop-private.com/yachting.html</loc></url>
+  <url><loc>https://nonstop-private.com/contact.html</loc></url>
+  <url><loc>https://nonstop-private.com/paris.html</loc></url>
+  <url><loc>https://nonstop-private.com/french-riviera.html</loc></url>
+  <url><loc>https://nonstop-private.com/london.html</loc></url>
+  <url><loc>https://nonstop-private.com/how-it-works.html</loc></url>
+  <url><loc>https://nonstop-private.com/membership.html</loc></url>
+  <url><loc>https://nonstop-private.com/faq.html</loc></url>
+</urlset>
