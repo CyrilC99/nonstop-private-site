@@ -161,7 +161,18 @@
       data.append('Page', location.href);
       btn.disabled = true; btn.textContent = 'Sending…';
       fetch(ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
-        .then(function (r) { if (!r.ok) throw 0; f.innerHTML = '<p style="grid-column: 1 / -1; margin: 0; font-family: Cinzel, serif; font-size: 22px; letter-spacing: .04em; color: #CDB07A">Thank you. We will be in touch very shortly.</p>'; })
+        .then(function (r) {
+          if (!r.ok) throw 0;
+          var wl = ['Hello NONSTOP PRIVATE, I just sent a request on your website.'];
+          f.querySelectorAll('input[name], textarea[name]').forEach(function (i) { if (!i.disabled && i.value && i.type !== 'hidden' || (i.type === 'hidden' && i.value && i.name === 'Dates')) wl.push(i.name + ': ' + i.value); });
+          var wa = 'https://wa.me/33621798111?text=' + encodeURIComponent(wl.join('\n'));
+          var ico = '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83 0-1.34.7-2 .95-2.28.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.46.24.55.79 1.9.86 2.04.07.13.11.3.02.48-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>';
+          f.innerHTML = '<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 22px; align-items: flex-start">'
+            + '<p style="margin: 0; font-family: Cinzel, serif; font-size: 22px; letter-spacing: .04em; color: #CDB07A">Thank you. We will be in touch very shortly.</p>'
+            + '<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #BDB9B1">For a faster answer, send your request on WhatsApp too. It is already written for you.</p>'
+            + '<a href="' + wa + '" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; background: #CDB07A; color: #000; padding: 16px 26px; min-height: 44px; box-sizing: border-box; font-family: Cinzel, serif; font-size: 14px; letter-spacing: .12em; font-weight: 500; text-decoration: none">' + ico + 'Send on WhatsApp</a>'
+            + '</div>';
+        })
         .catch(function () { btn.disabled = false; btn.textContent = 'Try again'; });
     });
   });
