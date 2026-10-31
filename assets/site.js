@@ -164,7 +164,7 @@
         .then(function (r) {
           if (!r.ok) throw 0;
           var wl = ['Hello NONSTOP PRIVATE, I just sent a request on your website.'];
-          f.querySelectorAll('input[name], textarea[name]').forEach(function (i) { if (!i.disabled && i.value && i.type !== 'hidden' || (i.type === 'hidden' && i.value && i.name === 'Dates')) wl.push(i.name + ': ' + i.value); });
+          f.querySelectorAll('input[name], textarea[name]').forEach(function (i) { if (i.disabled || !i.value) return; if (i.type === 'hidden' && !(i.name === 'Dates' || i.hasAttribute('data-np-keep'))) return; wl.push(i.name + ': ' + i.value); });
           var wa = 'https://wa.me/33621798111?text=' + encodeURIComponent(wl.join('\n'));
           var ico = '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83 0-1.34.7-2 .95-2.28.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.46.24.55.79 1.9.86 2.04.07.13.11.3.02.48-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>';
           f.innerHTML = '<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 22px; align-items: flex-start">'
@@ -175,5 +175,95 @@
         })
         .catch(function () { btn.disabled = false; btn.textContent = 'Try again'; });
     });
+  });
+})();
+
+/* Contact field: choose WhatsApp (with country code) or email */
+(function () {
+  var CC = [["AF","Afghanistan",93],["AL","Albania",355],["DZ","Algeria",213],["AS","American Samoa",1],["AD","Andorra",376],["AO","Angola",244],["AI","Anguilla",1],["AG","Antigua and Barbuda",1],["AR","Argentina",54],["AM","Armenia",374],["AW","Aruba",297],["AU","Australia",61],["AT","Austria",43],["AZ","Azerbaijan",994],["BS","Bahamas",1],["BH","Bahrain",973],["BD","Bangladesh",880],["BB","Barbados",1],["BY","Belarus",375],["BE","Belgium",32],["BZ","Belize",501],["BJ","Benin",229],["BM","Bermuda",1],["BT","Bhutan",975],["BO","Bolivia",591],["BQ","Bonaire",599],["BA","Bosnia and Herzegovina",387],["BW","Botswana",267],["BR","Brazil",55],["IO","British Indian Ocean Territory",246],["BN","Brunei Darussalam",673],["BG","Bulgaria",359],["BF","Burkina Faso",226],["BI","Burundi",257],["CV","Cabo Verde",238],["KH","Cambodia",855],["CM","Cameroon",237],["CA","Canada",1],["KY","Cayman Islands",1],["CF","Central African Republic",236],["TD","Chad",235],["CL","Chile",56],["CN","China",86],["CX","Christmas Island",61],["CC","Cocos (Keeling) Islands",61],["CO","Colombia",57],["KM","Comoros",269],["CD","Congo",243],["CG","Congo",242],["CK","Cook Islands",682],["CR","Costa Rica",506],["HR","Croatia",385],["CU","Cuba",53],["CW","Curaçao",599],["CY","Cyprus",357],["CZ","Czechia",420],["CI","Côte d'Ivoire",225],["DK","Denmark",45],["DJ","Djibouti",253],["DM","Dominica",1],["DO","Dominican Republic",1],["EC","Ecuador",593],["EG","Egypt",20],["SV","El Salvador",503],["GQ","Equatorial Guinea",240],["ER","Eritrea",291],["EE","Estonia",372],["SZ","Eswatini",268],["ET","Ethiopia",251],["FK","Falkland Islands (Malvinas)",500],["FO","Faroe Islands",298],["FJ","Fiji",679],["FI","Finland",358],["FR","France",33],["GF","French Guiana",594],["PF","French Polynesia",689],["GA","Gabon",241],["GM","Gambia",220],["GE","Georgia",995],["DE","Germany",49],["GH","Ghana",233],["GI","Gibraltar",350],["GR","Greece",30],["GL","Greenland",299],["GD","Grenada",1],["GP","Guadeloupe",590],["GU","Guam",1],["GT","Guatemala",502],["GG","Guernsey",44],["GN","Guinea",224],["GW","Guinea-Bissau",245],["GY","Guyana",592],["HT","Haiti",509],["VA","Holy See (Vatican City State)",39],["HN","Honduras",504],["HK","Hong Kong",852],["HU","Hungary",36],["IS","Iceland",354],["IN","India",91],["ID","Indonesia",62],["IR","Iran",98],["IQ","Iraq",964],["IE","Ireland",353],["IM","Isle of Man",44],["IL","Israel",972],["IT","Italy",39],["JM","Jamaica",1],["JP","Japan",81],["JE","Jersey",44],["JO","Jordan",962],["KZ","Kazakhstan",7],["KE","Kenya",254],["KI","Kiribati",686],["KW","Kuwait",965],["KG","Kyrgyzstan",996],["LA","Laos",856],["LV","Latvia",371],["LB","Lebanon",961],["LS","Lesotho",266],["LR","Liberia",231],["LY","Libya",218],["LI","Liechtenstein",423],["LT","Lithuania",370],["LU","Luxembourg",352],["MO","Macao",853],["MG","Madagascar",261],["MW","Malawi",265],["MY","Malaysia",60],["MV","Maldives",960],["ML","Mali",223],["MT","Malta",356],["MH","Marshall Islands",692],["MQ","Martinique",596],["MR","Mauritania",222],["MU","Mauritius",230],["YT","Mayotte",262],["MX","Mexico",52],["FM","Micronesia",691],["MD","Moldova",373],["MC","Monaco",377],["MN","Mongolia",976],["ME","Montenegro",382],["MS","Montserrat",1],["MA","Morocco",212],["MZ","Mozambique",258],["MM","Myanmar",95],["NA","Namibia",264],["NR","Nauru",674],["NP","Nepal",977],["NL","Netherlands",31],["NC","New Caledonia",687],["NZ","New Zealand",64],["NI","Nicaragua",505],["NE","Niger",227],["NG","Nigeria",234],["NU","Niue",683],["NF","Norfolk Island",672],["KP","North Korea",850],["MK","North Macedonia",389],["MP","Northern Mariana Islands",1],["NO","Norway",47],["OM","Oman",968],["PK","Pakistan",92],["PW","Palau",680],["PS","Palestine",970],["PA","Panama",507],["PG","Papua New Guinea",675],["PY","Paraguay",595],["PE","Peru",51],["PH","Philippines",63],["PL","Poland",48],["PT","Portugal",351],["PR","Puerto Rico",1],["QA","Qatar",974],["RO","Romania",40],["RU","Russian Federation",7],["RW","Rwanda",250],["RE","Réunion",262],["BL","Saint Barthélemy",590],["SH","Saint Helena",290],["KN","Saint Kitts and Nevis",1],["LC","Saint Lucia",1],["MF","Saint Martin (French part)",590],["PM","Saint Pierre and Miquelon",508],["VC","Saint Vincent and the Grenadines",1],["WS","Samoa",685],["SM","San Marino",378],["ST","Sao Tome and Principe",239],["SA","Saudi Arabia",966],["SN","Senegal",221],["RS","Serbia",381],["SC","Seychelles",248],["SL","Sierra Leone",232],["SG","Singapore",65],["SX","Sint Maarten (Dutch part)",1],["SK","Slovakia",421],["SI","Slovenia",386],["SB","Solomon Islands",677],["SO","Somalia",252],["ZA","South Africa",27],["KR","South Korea",82],["SS","South Sudan",211],["ES","Spain",34],["LK","Sri Lanka",94],["SD","Sudan",249],["SR","Suriname",597],["SJ","Svalbard and Jan Mayen",47],["SE","Sweden",46],["CH","Switzerland",41],["SY","Syria",963],["TW","Taiwan",886],["TJ","Tajikistan",992],["TZ","Tanzania",255],["TH","Thailand",66],["TL","Timor-Leste",670],["TG","Togo",228],["TK","Tokelau",690],["TO","Tonga",676],["TT","Trinidad and Tobago",1],["TN","Tunisia",216],["TM","Turkmenistan",993],["TC","Turks and Caicos Islands",1],["TV","Tuvalu",688],["TR","Türkiye",90],["UG","Uganda",256],["UA","Ukraine",380],["AE","United Arab Emirates",971],["GB","United Kingdom",44],["US","United States",1],["UY","Uruguay",598],["UZ","Uzbekistan",998],["VU","Vanuatu",678],["VE","Venezuela",58],["VN","Vietnam",84],["VG","Virgin Islands",1],["VI","Virgin Islands",1],["WF","Wallis and Futuna",681],["EH","Western Sahara",212],["YE","Yemen",967],["ZM","Zambia",260],["ZW","Zimbabwe",263],["AX","Åland Islands",358]];
+  function flag(r) { try { return String.fromCodePoint(127397 + r.charCodeAt(0), 127397 + r.charCodeAt(1)); } catch (e) { return ''; } }
+  function guess() {
+    var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    var m = l.match(/[-_]([A-Za-z]{2})$/); var r = m ? m[1].toUpperCase() : '';
+    if (!r) r = ({ fr: 'FR', en: 'GB', ar: 'AE', de: 'DE', it: 'IT', es: 'ES', el: 'GR', ru: 'RU', nl: 'NL', pt: 'PT' })[l.slice(0, 2).toLowerCase()] || 'AE';
+    return CC.some(function (c) { return c[0] === r; }) ? r : 'AE';
+  }
+  var GOLD = '#CDB07A';
+  document.querySelectorAll('form.np-form input[name="WhatsApp or email"], form.np-form input[name="Your contact"], form.np-form input[name="WhatsApp or phone"]').forEach(function (inp) {
+    var phoneOnly = inp.name === 'WhatsApp or phone';
+    var fieldStyle = inp.getAttribute('style') || '';
+    var lab = inp.closest('label');
+    var title = phoneOnly ? 'WhatsApp or phone' : 'Your contact';
+    var box = document.createElement('div');
+    box.setAttribute('style', (lab && lab.getAttribute('style')) || 'display:flex;flex-direction:column;gap:10px');
+    box.className = 'np-contact';
+    var t = document.createElement('span'); t.textContent = title; box.appendChild(t);
+
+    var hidPref = document.createElement('input'); hidPref.type = 'hidden'; hidPref.name = 'Preferred contact'; hidPref.setAttribute('data-np-keep', '');
+    var hidWa = document.createElement('input'); hidWa.type = 'hidden'; hidWa.name = phoneOnly ? 'WhatsApp or phone' : 'WhatsApp'; hidWa.setAttribute('data-np-keep', '');
+    var email = document.createElement('input'); email.type = 'email'; email.name = 'Email'; email.placeholder = 'you@email.com'; email.autocomplete = 'email'; email.setAttribute('style', fieldStyle);
+
+    var toggle = document.createElement('div');
+    toggle.setAttribute('style', 'display:flex;gap:0;margin-top:2px');
+    function tbtn(label, val) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.setAttribute('data-v', val);
+      b.setAttribute('style', 'flex:0 0 auto;min-height:40px;padding:8px 18px;border:1px solid #5A5853;background:transparent;color:#BDB9B1;font-family:Cinzel,serif;font-size:12px;letter-spacing:.14em;cursor:pointer');
+      return b;
+    }
+    var bWa = tbtn('WhatsApp', 'wa'), bEm = tbtn('Email', 'em'); bEm.style.borderLeft = 'none';
+    toggle.appendChild(bWa); toggle.appendChild(bEm);
+
+    var row = document.createElement('div'); row.setAttribute('style', 'display:flex;align-items:flex-end;gap:14px;min-width:0');
+    var pick = document.createElement('div'); pick.setAttribute('style', 'position:relative;flex:0 0 auto;border-bottom:1px solid #5A5853;min-height:44px;display:flex;align-items:center;padding:12px 4px 12px 0;box-sizing:border-box;color:#FFFFFF;font-size:19px;letter-spacing:.01em;text-transform:none;font-family:inherit;white-space:nowrap');
+    var shown = document.createElement('span'); pick.appendChild(shown);
+    var caret = document.createElement('span'); caret.textContent = ' ▾'; caret.style.color = GOLD; caret.style.fontSize = '14px'; pick.appendChild(caret);
+    var sel = document.createElement('select'); sel.setAttribute('aria-label', 'Country code');
+    sel.setAttribute('style', 'position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px');
+    var g = guess();
+    CC.forEach(function (c) { var o = document.createElement('option'); o.value = c[0]; o.textContent = flag(c[0]) + '  ' + c[1] + '  +' + c[2]; if (c[0] === g) o.selected = true; sel.appendChild(o); });
+    pick.appendChild(sel);
+    var tel = document.createElement('input'); tel.type = 'tel'; tel.inputMode = 'tel'; tel.autocomplete = 'tel-national'; tel.placeholder = 'Phone number'; tel.setAttribute('aria-label', 'Phone number');
+    tel.setAttribute('style', fieldStyle + ';flex:1 1 auto;min-width:0;width:100%');
+    row.appendChild(pick); row.appendChild(tel);
+
+    function code() { var c = CC.filter(function (x) { return x[0] === sel.value; })[0]; return c ? c[2] : ''; }
+    function sync() {
+      shown.textContent = flag(sel.value) + ' +' + code();
+      var n = tel.value.replace(/[^\d]/g, '').replace(/^0+/, '');
+      hidWa.value = n ? '+' + code() + ' ' + n : '';
+    }
+    var mode = 'wa';
+    function setMode(m) {
+      mode = m;
+      [bWa, bEm].forEach(function (b) { var on = b.getAttribute('data-v') === m; b.style.background = on ? GOLD : 'transparent'; b.style.color = on ? '#000' : '#BDB9B1'; b.style.borderColor = on ? GOLD : '#5A5853'; b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      row.style.display = m === 'wa' ? 'flex' : 'none';
+      email.style.display = m === 'em' ? '' : 'none';
+      hidWa.disabled = m !== 'wa'; email.disabled = m !== 'em';
+      hidPref.value = m === 'wa' ? 'WhatsApp' : 'Email';
+    }
+    bWa.addEventListener('click', function () { setMode('wa'); tel.focus(); });
+    bEm.addEventListener('click', function () { setMode('em'); email.focus(); });
+    sel.addEventListener('change', sync); tel.addEventListener('input', sync);
+
+    if (!phoneOnly) box.appendChild(toggle);
+    box.appendChild(row);
+    if (!phoneOnly) box.appendChild(email);
+    box.appendChild(hidWa);
+    if (!phoneOnly) box.appendChild(hidPref);
+    (lab || inp).replaceWith(box);
+    sync(); setMode('wa');
+
+    var form = box.closest('form'); var send = form && form.querySelector('button.np-send');
+    if (form && send) form.addEventListener('click', function (ev) {
+      if (!ev.target.closest || ev.target.closest('button.np-send') !== send) return;
+      sync();
+      var ok = mode === 'wa' ? tel.value.replace(/[^\d]/g, '').length >= 6 : /.+@.+\..+/.test(email.value);
+      if (!ok) {
+        ev.stopImmediatePropagation();
+        var f = mode === 'wa' ? tel : email; f.style.borderBottomColor = GOLD; f.focus();
+        var old = send.textContent; send.textContent = mode === 'wa' ? 'Please add your WhatsApp number' : 'Please add your email';
+        setTimeout(function () { send.textContent = old; }, 2500);
+      }
+    }, true);
   });
 })();
