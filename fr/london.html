@@ -255,7 +255,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   <section id="newsletter" style="border-top: 1px solid #262522; background: #0E0D0B">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 90px 32px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; justify-content: space-between">
       <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
-        <span style="font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.2em; color: #CDB07A; font-weight: 500">Lettre privée</span>
+        <span style="font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.2em; color: #CDB07A; font-weight: 500">Newsletter</span>
         <h2 class="np-h2" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 32px; line-height: 1.25; letter-spacing: 0.04em">Les meilleures adresses, avant tout le monde.</h2>
         <p style="margin: 0; font-size: 20px; line-height: 1.6; color: #BDB9B1; max-width: 560px">Une fois par mois : les villas, yachts et événements qui s’ouvrent, avec un accès en avant-première pour nos lecteurs. Rien d’autre.</p>
       </div>
@@ -278,7 +278,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
         var v = f.EMAIL.value.trim();
         if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { e.preventDefault(); m.textContent = 'Merci d’indiquer un email valide.'; m.style.color = '#CDB07A'; return; }
         sent = true; f.querySelector('button').disabled = true;
-        setTimeout(function () { f.style.display = 'none'; m.textContent = 'Merci. Vous recevrez notre prochaine lettre privée.'; m.style.color = '#CDB07A'; m.style.fontSize = '20px'; }, 900);
+        setTimeout(function () { f.style.display = 'none'; m.textContent = 'Merci. Vous recevrez notre prochaine newsletter.'; m.style.color = '#CDB07A'; m.style.fontSize = '20px'; }, 900);
       });
     })();
     </script>
