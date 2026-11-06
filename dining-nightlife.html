@@ -224,6 +224,39 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       <a href="villas-hotels.html" class="svc-card" style="display: flex; flex-direction: column; gap: 16px"><div class="svc-media"><img loading="lazy" decoding="async" src="assets/81dcfb956616ad1fff818575fa538442.webp" alt="Cycladic villa with infinity pool" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block"></div><div class="svc-line" aria-hidden="true"></div><span style="font-family: 'Cinzel', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">Villas &amp; hotels →</span></a>
     </div>
   </section>
+  <!-- NEWSLETTER -->
+  <section id="newsletter" style="border-top: 1px solid #262522; background: #0E0D0B">
+    <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 90px 32px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center; justify-content: space-between">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <span style="font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.2em; color: #CDB07A; font-weight: 500">Newsletter</span>
+        <h2 class="np-h2" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 32px; line-height: 1.25; letter-spacing: 0.04em">The best addresses, before everyone else.</h2>
+        <p style="margin: 0; font-size: 20px; line-height: 1.6; color: #BDB9B1; max-width: 560px">Once a month: the villas, yachts and events opening up, with early access for our readers. Nothing else.</p>
+      </div>
+      <div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+        <form id="np-nl" method="POST" action="https://fd6dfd3a.sibforms.com/serve/MUIFADdZ2_omknjfdZDT4ioSkSRsmnrQTLOq3e9uDT1MQ2NxmpIU6WNvfDXdNJpdXrvzQU658kTlNRq_jDRWBPiEFgwF52TE4s-6FDg8CqfNfc3E-C2f8vrtsy2HXwFXU2VubUwkT5kSL0Bzy20tGNzQ_YfScCHMM1RuVDMGVq8hG-MthCUqJ_87FPvWtvXHZZAsgBx6i-u060exXA==" target="np-nl-frame" novalidate style="display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end">
+          <input type="email" name="EMAIL" required autocomplete="email" placeholder="Your email" aria-label="Your email" class="np-field" style="flex: 1 1 240px; min-width: 0; background: transparent; border: none; border-bottom: 1px solid #5A5853; color: #FFFFFF; font-size: 19px; padding: 12px 0; min-height: 47px; box-sizing: border-box; outline: none">
+          <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+          <input type="hidden" name="locale" value="fr">
+          <input type="hidden" name="html_type" value="simple">
+          <button type="submit" style="flex: 0 0 auto; background: #CDB07A; color: #000000; border: none; padding: 16px 28px; min-height: 47px; cursor: pointer; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.12em; font-weight: 500">Subscribe</button>
+        </form>
+        <p id="np-nl-msg" role="status" style="margin: 0; font-size: 16px; line-height: 1.5; color: #8E8A83">One click to unsubscribe, at any time. Your email is never shared.</p>
+        <iframe name="np-nl-frame" title="newsletter" style="display: none"></iframe>
+      </div>
+    </div>
+    <script>
+    (function () {
+      var f = document.getElementById('np-nl'), m = document.getElementById('np-nl-msg'), sent = false;
+      f.addEventListener('submit', function (e) {
+        var v = f.EMAIL.value.trim();
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { e.preventDefault(); m.textContent = 'Please enter a valid email.'; m.style.color = '#CDB07A'; return; }
+        sent = true; f.querySelector('button').disabled = true;
+        setTimeout(function () { f.style.display = 'none'; m.textContent = 'Thank you. You will receive our next newsletter.'; m.style.color = '#CDB07A'; m.style.fontSize = '20px'; }, 900);
+      });
+    })();
+    </script>
+  </section>
+
 
   <footer style="border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 56px 32px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
