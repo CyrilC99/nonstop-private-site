@@ -22,7 +22,10 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet"></noscript>
 <style>
 .np-dd{position:relative}.np-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:44px;transition:color .3s ease}.np-dd>summary::-webkit-details-marker{display:none}.np-dd>summary::after{content:"";width:6px;height:6px;border-right:1px solid #CDB07A;border-bottom:1px solid #CDB07A;transform:translateY(-3px) rotate(45deg);transition:transform .3s ease}.np-dd[open]>summary::after{transform:translateY(1px) rotate(-135deg)}.np-dd>summary:hover,.np-dd[open]>summary{color:#CDB07A}.np-dd-panel{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);min-width:270px;background:rgba(0,0,0,.96);border:1px solid rgba(205,176,122,.45);padding:10px 0;display:flex;flex-direction:column;z-index:60;animation:ddIn .35s ease both;box-shadow:0 20px 50px rgba(0,0,0,.5)}.np-dd-r .np-dd-panel{left:auto;right:0;transform:none}.np-dd-panel a{padding:13px 26px;font-size:13px;letter-spacing:.12em;white-space:nowrap;transition:background .25s ease,color .25s ease}.np-dd-panel a:hover{background:rgba(205,176,122,.08)}.np-dd-m{display:flex;flex-direction:column;align-items:center}.np-dd-m .np-dd-list{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:18px;font-size:15px;letter-spacing:.12em;animation:ddIn .35s ease both}.np-dd:not(.np-dd-m)[open]>summary::before{content:"";position:fixed;inset:0;z-index:55;cursor:default}@keyframes ddIn{from{opacity:0;margin-top:-6px}to{opacity:1;margin-top:0}}
 body{margin:0;background:#000}
@@ -134,7 +137,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   <div id="np-menu" hidden>
     <div role="dialog" aria-label="Menu" style="position: fixed; inset: 0; z-index: 80; background: rgba(0, 0, 0, 0.97); display: flex; flex-direction: column; padding: 16px 20px 40px; box-sizing: border-box">
       <div style="display: flex; align-items: center; justify-content: space-between">
-        <img src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 28px; width: auto; display: block">
+        <img width="170" height="94" src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 28px; width: auto; display: block">
         <button type="button" onclick="npMenu(false)" aria-label="Fermer le menu" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; background: transparent; border: 1px solid rgba(205, 176, 122, 0.6); color: #CDB07A; cursor: pointer">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg>
         </button>
@@ -159,12 +162,12 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 
   <!-- HERO full-bleed -->
   <section id="top" class="np-hero" style="position: relative; min-height: 820px; display: flex; flex-direction: column; overflow: hidden">
-    <img fetchpriority="high" src="../assets/5b03b52fee632880a89ff50fb2b73407.webp" alt="Jet privé sur le tarmac au coucher du soleil, une voiture noire attend au pied de la passerelle" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; display: block">
+    <img fetchpriority="high" src="../assets/5b03b52fee632880a89ff50fb2b73407.webp" srcset="../assets/5b03b52fee632880a89ff50fb2b73407-800.webp 800w, ../assets/5b03b52fee632880a89ff50fb2b73407.webp 1672w" sizes="100vw" alt="Jet privé sur le tarmac au coucher du soleil, une voiture noire attend au pied de la passerelle" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; display: block">
     <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.48)"></div>
     <header style="position: relative">
       <nav aria-label="Principal" class="np-nav" style="max-width: 1240px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
         <a href="#top" aria-label="NONSTOP PRIVATE, accueil" style="display: flex; align-items: center">
-          <img src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 30px; width: auto; display: block">
+          <img width="170" height="94" src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 30px; width: auto; display: block">
         </a>
         <div class="np-links-home" style="display: flex; flex-wrap: wrap; align-items: center; gap: 36px; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.14em; font-weight: 400">
           <a href="./" aria-current="page" style="color: #CDB07A">Accueil</a>
@@ -182,7 +185,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       </nav>
     </header>
     <div class="np-pad" style="position: relative; flex: 1 1 auto; max-width: 1240px; width: 100%; margin: 0 auto; padding: 60px 32px 90px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 40px">
-      <img src="../assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE Worldwide" style="width: 100%; max-width: 560px; height: auto; display: block">
+      <img width="716" height="293" src="../assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE Worldwide" style="width: 100%; max-width: 560px; height: auto; display: block">
       <div style="width: 64px; height: 1px; background: #CDB07A"></div>
       <h1 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 32px; line-height: 1.3; letter-spacing: 0.06em">Anything. Anywhere. Any time.</h1>
       <p class="np-lead" style="margin: 0; font-size: 21px; line-height: 1.6; color: #EDEAE4; max-width: 560px">Une conciergerie privée qui ne ferme jamais. Un numéro, une personne, toutes vos demandes : du jet de dernière minute à la table introuvable sur les applications de réservation.</p>
@@ -225,11 +228,11 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
         <a href="destinations.html" style="border: 1px solid #CDB07A; padding: 16px 26px; min-height: 44px; box-sizing: border-box; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.12em">Toutes les destinations →</a>
       </div>
       <div class="np-dest">
-        <a href="mykonos.html" class="np-dcard np-dbig"><img loading="lazy" decoding="async" src="../assets/80b772c0070a8b4ef65108f4b3574e60.webp" alt="Little Venice et les moulins de Mykonos au coucher du soleil"><span class="np-dtag">Mai à octobre</span><span class="np-dtxt"><h3>Mykonos</h3><span class="np-dline"></span><p>Villas au dessus de la mer, transats dans le bon club, journées en yacht vers Délos.</p></span></a>
-        <a href="dubai.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/0575455698c791c89beebcde87db9ffb.webp" alt="La skyline de Dubaï au coucher du soleil depuis un rooftop"><span class="np-dtag">Octobre à avril</span><span class="np-dtxt"><h3>Dubaï</h3><span class="np-dline"></span><p>Penthouses, dîners dans le désert et les tables que tout le monde veut.</p></span></a>
-        <a href="french-riviera.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/87e1781481a1cc855374d6f5e0e88b44.webp" alt="Terrasse de villa fleurie de bougainvilliers face à un yacht dans la baie du Cap Ferrat"><span class="np-dtag">Mai à septembre</span><span class="np-dtxt"><h3>Saint-Tropez</h3><span class="np-dline"></span><p>De Monaco à Pampelonne, en hélicoptère et par la mer.</p></span></a>
-        <a href="courchevel.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/001bde24c97c602206970e085acba661.webp" alt="Chalet de luxe en bois illuminé à l’heure bleue dans la neige, Courchevel"><span class="np-dtag">Décembre à avril</span><span class="np-dtxt"><h3>Courchevel</h3><span class="np-dline"></span><p>Chalets skis aux pieds avec chef, majordome et spa.</p></span></a>
-        <a href="ibiza.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/a5ca506cf2437ac90192a18063bef645.webp" alt="Terrasse de villa avec piscine à débordement face à Es Vedrà au coucher du soleil, Ibiza"><span class="np-dtag">Mai à octobre</span><span class="np-dtxt"><h3>Ibiza</h3><span class="np-dline"></span><p>Villas isolées, Formentera en bateau et nuits légendaires.</p></span></a>
+        <a href="mykonos.html" class="np-dcard np-dbig"><img loading="lazy" decoding="async" src="../assets/80b772c0070a8b4ef65108f4b3574e60.webp" srcset="../assets/80b772c0070a8b4ef65108f4b3574e60-800.webp 800w, ../assets/80b772c0070a8b4ef65108f4b3574e60.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw" alt="Little Venice et les moulins de Mykonos au coucher du soleil"><span class="np-dtag">Mai à octobre</span><span class="np-dtxt"><h3>Mykonos</h3><span class="np-dline"></span><p>Villas au dessus de la mer, transats dans le bon club, journées en yacht vers Délos.</p></span></a>
+        <a href="dubai.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/0575455698c791c89beebcde87db9ffb.webp" srcset="../assets/0575455698c791c89beebcde87db9ffb-800.webp 800w, ../assets/0575455698c791c89beebcde87db9ffb.webp 1344w" sizes="(max-width: 760px) 100vw, 50vw" alt="La skyline de Dubaï au coucher du soleil depuis un rooftop"><span class="np-dtag">Octobre à avril</span><span class="np-dtxt"><h3>Dubaï</h3><span class="np-dline"></span><p>Penthouses, dîners dans le désert et les tables que tout le monde veut.</p></span></a>
+        <a href="french-riviera.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/87e1781481a1cc855374d6f5e0e88b44.webp" srcset="../assets/87e1781481a1cc855374d6f5e0e88b44-800.webp 800w, ../assets/87e1781481a1cc855374d6f5e0e88b44.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw" alt="Terrasse de villa fleurie de bougainvilliers face à un yacht dans la baie du Cap Ferrat"><span class="np-dtag">Mai à septembre</span><span class="np-dtxt"><h3>Saint-Tropez</h3><span class="np-dline"></span><p>De Monaco à Pampelonne, en hélicoptère et par la mer.</p></span></a>
+        <a href="courchevel.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/001bde24c97c602206970e085acba661.webp" srcset="../assets/001bde24c97c602206970e085acba661-800.webp 800w, ../assets/001bde24c97c602206970e085acba661.webp 1950w" sizes="(max-width: 760px) 100vw, 50vw" alt="Chalet de luxe en bois illuminé à l’heure bleue dans la neige, Courchevel"><span class="np-dtag">Décembre à avril</span><span class="np-dtxt"><h3>Courchevel</h3><span class="np-dline"></span><p>Chalets skis aux pieds avec chef, majordome et spa.</p></span></a>
+        <a href="ibiza.html" class="np-dcard"><img loading="lazy" decoding="async" src="../assets/a5ca506cf2437ac90192a18063bef645.webp" srcset="../assets/a5ca506cf2437ac90192a18063bef645-800.webp 800w, ../assets/a5ca506cf2437ac90192a18063bef645.webp 1800w" sizes="(max-width: 760px) 100vw, 50vw" alt="Terrasse de villa avec piscine à débordement face à Es Vedrà au coucher du soleil, Ibiza"><span class="np-dtag">Mai à octobre</span><span class="np-dtxt"><h3>Ibiza</h3><span class="np-dline"></span><p>Villas isolées, Formentera en bateau et nuits légendaires.</p></span></a>
       </div>
       <div class="np-more"><span style="color: #CDB07A; font-size: 13px; letter-spacing: 0.2em">Et aussi</span><a href="st-barth.html">Saint Barth</a> <span style="color:#5A5853">·</span> <a href="paris.html">Paris</a> <span style="color:#5A5853">·</span> <a href="london.html">Londres</a> <span style="color:#5A5853">·</span> <a href="miami.html">Miami</a> <span style="color:#5A5853">·</span> <a href="marbella.html">Marbella</a> <span style="color:#5A5853">·</span> <a href="bali.html">Bali</a></div>
     </div>
@@ -303,7 +306,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   <footer style="border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 72px 32px 48px; display: flex; flex-direction: column; gap: 48px">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px">
-        <img src="../assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE Worldwide" style="width: 260px; max-width: 100%; height: auto; display: block">
+        <img width="716" height="293" src="../assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE Worldwide" style="width: 260px; max-width: 100%; height: auto; display: block">
         <div style="display: flex; flex-wrap: wrap; gap: 56px; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.14em">
           <div style="display: flex; flex-direction: column; gap: 16px">
             <a href="services.html">Tous les services</a>

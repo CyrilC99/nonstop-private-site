@@ -21,7 +21,10 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet"></noscript>
 <style>
 .np-dd{position:relative}.np-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:44px;transition:color .3s ease}.np-dd>summary::-webkit-details-marker{display:none}.np-dd>summary::after{content:"";width:6px;height:6px;border-right:1px solid #CDB07A;border-bottom:1px solid #CDB07A;transform:translateY(-3px) rotate(45deg);transition:transform .3s ease}.np-dd[open]>summary::after{transform:translateY(1px) rotate(-135deg)}.np-dd>summary:hover,.np-dd[open]>summary{color:#CDB07A}.np-dd-panel{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);min-width:270px;background:rgba(0,0,0,.96);border:1px solid rgba(205,176,122,.45);padding:10px 0;display:flex;flex-direction:column;z-index:60;animation:ddIn .35s ease both;box-shadow:0 20px 50px rgba(0,0,0,.5)}.np-dd-r .np-dd-panel{left:auto;right:0;transform:none}.np-dd-panel a{padding:13px 26px;font-size:13px;letter-spacing:.12em;white-space:nowrap;transition:background .25s ease,color .25s ease}.np-dd-panel a:hover{background:rgba(205,176,122,.08)}.np-dd-m{display:flex;flex-direction:column;align-items:center}.np-dd-m .np-dd-list{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:18px;font-size:15px;letter-spacing:.12em;animation:ddIn .35s ease both}.np-dd:not(.np-dd-m)[open]>summary::before{content:"";position:fixed;inset:0;z-index:55;cursor:default}@keyframes ddIn{from{opacity:0;margin-top:-6px}to{opacity:1;margin-top:0}}
 body{margin:0;background:#000}
@@ -97,7 +100,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   <div id="np-menu" hidden>
     <div role="dialog" aria-label="Menu" style="position: fixed; inset: 0; z-index: 80; background: rgba(0, 0, 0, 0.97); display: flex; flex-direction: column; padding: 16px 20px 40px; box-sizing: border-box">
       <div style="display: flex; align-items: center; justify-content: space-between">
-        <img src="assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 28px; width: auto; display: block">
+        <img width="170" height="94" src="assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 28px; width: auto; display: block">
         <button type="button" onclick="npMenu(false)" aria-label="Close menu" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; background: transparent; border: 1px solid rgba(205, 176, 122, 0.6); color: #CDB07A; cursor: pointer">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg>
         </button>
@@ -111,7 +114,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
         <a href="membership.html" onclick="npMenu(false)">Membership</a>
         <a href="faq.html" onclick="npMenu(false)">FAQ</a>
           <a href="fr/journal.html" hreflang="fr" lang="fr" onclick="npMenu(false)" style="color: #CDB07A; border: 1px solid rgba(205, 176, 122, 0.6); padding: 6px 12px">FR</a>
-        <a href="contact.html?destination=Mykonos" onclick="npMenu(false)" style="margin-top: 12px; background: #CDB07A; color: #000000; padding: 16px 28px; font-size: 15px; letter-spacing: 0.12em; font-weight: 500">Make a request</a>
+        <a href="contact.html" onclick="npMenu(false)" style="margin-top: 12px; background: #CDB07A; color: #000000; padding: 16px 28px; font-size: 15px; letter-spacing: 0.12em; font-weight: 500">Make a request</a>
       </nav>
       <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 18px; color: #BDB9B1">
         <a href="https://wa.me/33766909971" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px" aria-label="WhatsApp +33 7 66 90 99 71"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex: 0 0 auto; color: #CDB07A"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.6 21.4l4.7-1.2A9.4 9.4 0 1 0 12 2.6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path><path fill="currentColor" transform="translate(12 12) scale(0.74) translate(-12.15 -12.45)" d="M9.2 7.4c-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6 0 1.6 1.1 3 1.3 3.2.2.2 2.2 3.5 5.4 4.8 2.7 1.1 3.2.9 3.8.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1z"></path></svg><span>+33 7 66 90 99 71</span></a>
@@ -121,12 +124,12 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   </div>
 
   <section id="top" class="np-hero2" style="position: relative; min-height: 760px; display: flex; flex-direction: column; overflow: hidden">
-    <img class="np-zoom" src="assets/journal-mykonos-villa-west.webp" alt="Whitewashed villa terrace with an infinity pool facing the sea and an island at sunset, Mykonos" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+    <img fetchpriority="high" class="np-zoom" src="assets/journal-mykonos-villa-west.webp" srcset="assets/journal-mykonos-villa-west-800.webp 800w, assets/journal-mykonos-villa-west.webp 1536w" sizes="100vw" alt="Whitewashed villa terrace with an infinity pool facing the sea and an island at sunset, Mykonos" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
     <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.25) 40%, rgba(0,0,0,.7))"></div>
     <header style="position: relative">
       <nav aria-label="Main" class="np-nav" style="max-width: 1240px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
         <a href="./" aria-label="NONSTOP PRIVATE — home" style="display: flex; align-items: center">
-          <img src="assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 30px; width: auto; display: block">
+          <img width="170" height="94" src="assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 30px; width: auto; display: block">
         </a>
         <div class="np-links-home" style="display: flex; flex-wrap: wrap; align-items: center; gap: 34px; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.14em; font-weight: 400">
           <a href="./">Home</a>
@@ -137,7 +140,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
           <a href="membership.html">Membership</a>
           <a href="faq.html">FAQ</a>
           <a href="fr/journal.html" hreflang="fr" lang="fr" style="color: #CDB07A; border: 1px solid rgba(205, 176, 122, 0.6); padding: 6px 12px">FR</a>
-          <a href="contact.html?destination=Mykonos" style="background: #CDB07A; color: #000000; padding: 13px 22px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; font-weight: 500">Make a request</a>
+          <a href="contact.html" style="background: #CDB07A; color: #000000; padding: 13px 22px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; font-weight: 500">Make a request</a>
         </div>
         <button type="button" class="np-burger" onclick="npMenu(true)" aria-label="Open menu" aria-expanded="false" style="align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; background: transparent; border: 1px solid rgba(205, 176, 122, 0.6); color: #CDB07A; cursor: pointer">
           <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"></path></svg>
@@ -155,7 +158,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
     <section class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 100px 32px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
         <a href="journal-mykonos-villa-guide.html" class="svc-card svc-box" style="display: flex; flex-direction: column; color: #FFFFFF">
-          <div class="svc-media"><img loading="lazy" decoding="async" src="assets/journal-mykonos-villa-west.webp" alt="Whitewashed villa terrace with an infinity pool facing the sea and an island at sunset, Mykonos" class="np-svcimg" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block"></div>
+          <div class="svc-media"><img loading="lazy" decoding="async" src="assets/journal-mykonos-villa-west.webp" srcset="assets/journal-mykonos-villa-west-800.webp 800w, assets/journal-mykonos-villa-west.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw" alt="Whitewashed villa terrace with an infinity pool facing the sea and an island at sunset, Mykonos" class="np-svcimg" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block"></div>
           <div style="display: flex; flex-direction: column; gap: 12px; padding: 26px">
             <span style="font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.2em; color: #CDB07A; font-weight: 500; font-size: 12px">Journal · Mykonos · 8 min read</span>
             <h2 style="margin: 0; font-family: 'Cinzel', serif; font-weight: 500; font-size: 22px; line-height: 1.3; letter-spacing: 0.05em">Renting a villa in Mykonos: The 2027 guide</h2>
@@ -164,16 +167,16 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
           </div>
         </a>
       </div>
-      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #8E8A83">More guides are on the way: Dubai in winter, Saint-Tropez by sea, Courchevel for the holidays.</p>
+      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #8E8A83">A new guide every day.</p>
     </section>
 
     <section style="background: #0E0D0B; border-top: 1px solid #262522; border-bottom: 1px solid #262522">
       <div class="np-pad" style="max-width: 900px; margin: 0 auto; padding: 100px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px">
-        <span style="font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.2em; color: #CDB07A; font-weight: 500">Your stay in Mykonos</span>
+        <span style="font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.2em; color: #CDB07A; font-weight: 500">Your next stay</span>
         <h2 class="np-h2" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 34px; line-height: 1.25; letter-spacing: 0.04em">One message. We handle the rest.</h2>
         <p style="margin: 0; font-size: 20px; line-height: 1.6; color: #BDB9B1; max-width: 620px">Tell us your dates and what you have in mind. One dedicated contact answers, day or night, with a precise, free quote. Nothing is booked until you approve it.</p>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 8px">
-          <a href="contact.html?destination=Mykonos" style="background: #CDB07A; color: #000000; padding: 18px 30px; min-height: 44px; box-sizing: border-box; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.12em; font-weight: 500">Make a request</a>
+          <a href="contact.html" style="background: #CDB07A; color: #000000; padding: 18px 30px; min-height: 44px; box-sizing: border-box; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.12em; font-weight: 500">Make a request</a>
           <a href="https://wa.me/33766909971" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; border: 1px solid #CDB07A; padding: 16px 26px; min-height: 44px; box-sizing: border-box; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.12em"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex: 0 0 auto; color: #CDB07A"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.6 21.4l4.7-1.2A9.4 9.4 0 1 0 12 2.6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path><path fill="currentColor" transform="translate(12 12) scale(0.74) translate(-12.15 -12.45)" d="M9.2 7.4c-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6 0 1.6 1.1 3 1.3 3.2.2.2 2.2 3.5 5.4 4.8 2.7 1.1 3.2.9 3.8.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1z"></path></svg>WhatsApp</a>
         </div>
       </div>
@@ -217,7 +220,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   <footer style="border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 72px 32px 48px; display: flex; flex-direction: column; gap: 48px">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px">
-        <img src="assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE — Worldwide" style="width: 260px; max-width: 100%; height: auto; display: block">
+        <img width="716" height="293" src="assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE — Worldwide" style="width: 260px; max-width: 100%; height: auto; display: block">
         <div style="display: flex; flex-wrap: wrap; gap: 56px; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.14em">
           <div style="display: flex; flex-direction: column; gap: 16px">
             <a href="services.html">All services</a>
@@ -228,7 +231,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
           <div style="display: flex; flex-direction: column; gap: 16px">
             <a href="membership.html">Membership</a>
             <a href="faq.html">FAQ</a>
-            <a href="contact.html?destination=Mykonos">Contact</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
       </div>

@@ -22,7 +22,10 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet"></noscript>
 <style>
 .np-dd{position:relative}.np-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:44px;transition:color .3s ease}.np-dd>summary::-webkit-details-marker{display:none}.np-dd>summary::after{content:"";width:6px;height:6px;border-right:1px solid #CDB07A;border-bottom:1px solid #CDB07A;transform:translateY(-3px) rotate(45deg);transition:transform .3s ease}.np-dd[open]>summary::after{transform:translateY(1px) rotate(-135deg)}.np-dd>summary:hover,.np-dd[open]>summary{color:#CDB07A}.np-dd-panel{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);min-width:270px;background:rgba(0,0,0,.96);border:1px solid rgba(205,176,122,.45);padding:10px 0;display:flex;flex-direction:column;z-index:60;animation:ddIn .35s ease both;box-shadow:0 20px 50px rgba(0,0,0,.5)}.np-dd-r .np-dd-panel{left:auto;right:0;transform:none}.np-dd-panel a{padding:13px 26px;font-size:13px;letter-spacing:.12em;white-space:nowrap;transition:background .25s ease,color .25s ease}.np-dd-panel a:hover{background:rgba(205,176,122,.08)}.np-dd-m{display:flex;flex-direction:column;align-items:center}.np-dd-m .np-dd-list{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:18px;font-size:15px;letter-spacing:.12em;animation:ddIn .35s ease both}.np-dd:not(.np-dd-m)[open]>summary::before{content:"";position:fixed;inset:0;z-index:55;cursor:default}@keyframes ddIn{from{opacity:0;margin-top:-6px}to{opacity:1;margin-top:0}}
 body{margin:0;background:#000}
@@ -124,7 +127,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   <div id="np-menu" hidden>
     <div role="dialog" aria-label="Menu" style="position: fixed; inset: 0; z-index: 80; background: rgba(0, 0, 0, 0.97); display: flex; flex-direction: column; padding: 16px 20px 40px; box-sizing: border-box">
       <div style="display: flex; align-items: center; justify-content: space-between">
-        <img src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 28px; width: auto; display: block">
+        <img width="170" height="94" src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 28px; width: auto; display: block">
         <button type="button" onclick="npMenu(false)" aria-label="Fermer le menu" style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; background: transparent; border: 1px solid rgba(205, 176, 122, 0.6); color: #CDB07A; cursor: pointer">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg>
         </button>
@@ -148,12 +151,12 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
   </div>
 
   <section id="top" class="np-hero2" style="position: relative; min-height: 760px; display: flex; flex-direction: column; overflow: hidden">
-    <img class="np-zoom" src="../assets/f715d1c3f4606cdd36e8198ce095cc60.webp" alt="Bureau de conciergerie la nuit avec champagne, carnet et lumières de la ville" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block">
+    <img fetchpriority="high" class="np-zoom" src="../assets/f715d1c3f4606cdd36e8198ce095cc60.webp" srcset="../assets/f715d1c3f4606cdd36e8198ce095cc60-800.webp 800w, ../assets/f715d1c3f4606cdd36e8198ce095cc60.webp 1122w" sizes="100vw" alt="Bureau de conciergerie la nuit avec champagne, carnet et lumières de la ville" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block">
     <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.5)"></div>
     <header style="position: relative">
       <nav aria-label="Principal" class="np-nav" style="max-width: 1240px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
         <a href="./" aria-label="NONSTOP PRIVATE, accueil" style="display: flex; align-items: center">
-          <img src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 30px; width: auto; display: block">
+          <img width="170" height="94" src="../assets/92648117f99f166555a104996c707c0c.png" alt="NP" style="height: 30px; width: auto; display: block">
         </a>
         <div class="np-links-home" style="display: flex; flex-wrap: wrap; align-items: center; gap: 34px; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.14em; font-weight: 400">
           <a href="./">Accueil</a>
@@ -221,7 +224,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
     <span style="font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.2em; color: #CDB07A; font-weight: 500">Autres services</span>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
       <a href="private-aviation.html" class="svc-card" style="display: flex; flex-direction: column; gap: 16px"><div class="svc-media"><img loading="lazy" decoding="async" src="../assets/747bbad9bd60d617ebdcbdb18435d7ef.webp" alt="Cabine de jet privé au coucher du soleil" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block"></div><div class="svc-line" aria-hidden="true"></div><span style="font-family: 'Cinzel', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">Aviation privée →</span></a>
-      <a href="shopping-gifts.html" class="svc-card" style="display: flex; flex-direction: column; gap: 16px"><div class="svc-media"><img loading="lazy" decoding="async" src="../assets/b406bf5b210531c9c0136e772790587d.webp" alt="Sacs de shopping et coffret cadeau sur une terrasse ensoleillée" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block"></div><div class="svc-line" aria-hidden="true"></div><span style="font-family: 'Cinzel', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">Shopping &amp; cadeaux →</span></a>
+      <a href="shopping-gifts.html" class="svc-card" style="display: flex; flex-direction: column; gap: 16px"><div class="svc-media"><img loading="lazy" decoding="async" src="../assets/b406bf5b210531c9c0136e772790587d.webp" srcset="../assets/b406bf5b210531c9c0136e772790587d-800.webp 800w, ../assets/b406bf5b210531c9c0136e772790587d.webp 1122w" sizes="(max-width: 760px) 100vw, 50vw" alt="Sacs de shopping et coffret cadeau sur une terrasse ensoleillée" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block"></div><div class="svc-line" aria-hidden="true"></div><span style="font-family: 'Cinzel', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">Shopping &amp; cadeaux →</span></a>
       <a href="dining-nightlife.html" class="svc-card" style="display: flex; flex-direction: column; gap: 16px"><div class="svc-media"><img loading="lazy" decoding="async" src="../assets/dcabb8df940400df075deb5096998eef.webp" alt="Dîner aux chandelles au bord de la mer" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block"></div><div class="svc-line" aria-hidden="true"></div><span style="font-family: 'Cinzel', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">Restaurants &amp; nightlife →</span></a>
     </div>
   </section>
@@ -261,7 +264,7 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 
   <footer style="border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 56px 32px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
-      <a href="./" aria-label="Retour à l’accueil"><img src="../assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE Worldwide" style="width: 220px; max-width: 100%; height: auto; display: block"></a>
+      <a href="./" aria-label="Retour à l’accueil"><img width="716" height="293" src="../assets/1dc6fc973aa1697848d75fe5e358ee17.png" alt="NONSTOP PRIVATE Worldwide" style="width: 220px; max-width: 100%; height: auto; display: block"></a>
       <span style="font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.12em; color: #8E8A82">© 2026 NONSTOP PRIVATE · Mentions légales · Confidentialité</span>
     </div>
   </footer>
