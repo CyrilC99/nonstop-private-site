@@ -10,7 +10,7 @@ Key facts:
 - Clients can send a single request or join the yearly membership (dedicated lifestyle manager, priority access)
 - Contact: contact@nonstop-private.com, +33 7 66 90 99 71 (phone and WhatsApp), https://nonstop-private.com/contact.html
 - Instagram: https://www.instagram.com/np_private_worldwide/
-- Languages: English and French (French pages under /fr/)
+- Languages: English, French and German (French pages under /fr/, German pages under /de/)
 
 ## About
 - [About NONSTOP PRIVATE](https://nonstop-private.com/about.html): who we are, what we arrange, where we operate
@@ -88,3 +88,4 @@ Key facts:
 
 ## Optional
 - [Version française](https://nonstop-private.com/fr/)
+- [Deutsche Version](https://nonstop-private.com/de/)
