@@ -210,8 +210,8 @@
       b.setAttribute('style', 'flex:0 0 auto;min-height:40px;padding:8px 18px;border:1px solid #5A5853;background:transparent;color:#BDB9B1;font-family:Cinzel,serif;font-size:12px;letter-spacing:.14em;cursor:pointer');
       return b;
     }
-    var bWa = tbtn('WhatsApp', 'wa'), bEm = tbtn('Email', 'em'); bEm.style.borderLeft = 'none';
-    toggle.appendChild(bWa); toggle.appendChild(bEm);
+    var bWa = tbtn('WhatsApp', 'wa'), bEm = tbtn('Email', 'em'); bWa.style.borderLeft = 'none';
+    toggle.appendChild(bEm); toggle.appendChild(bWa);
 
     var row = document.createElement('div'); row.setAttribute('style', 'display:flex;align-items:flex-end;gap:14px;min-width:0');
     var pick = document.createElement('div'); pick.setAttribute('style', 'position:relative;flex:0 0 auto;border-bottom:1px solid #5A5853;min-height:44px;display:flex;align-items:center;padding:12px 4px 12px 0;box-sizing:border-box;color:#FFFFFF;font-size:19px;letter-spacing:.01em;text-transform:none;font-family:inherit;white-space:nowrap');
@@ -241,7 +241,7 @@
       hidWa.disabled = m !== 'wa'; email.disabled = m !== 'em';
       hidPref.value = m === 'wa' ? 'WhatsApp' : 'Email';
     }
-    bWa.addEventListener('click', function () { setMode('wa'); tel.focus(); });
+    bWa.addEventListener('click', function () { if (!phoneOnly) { window.open('https://wa.me/33766909971', '_blank', 'noopener'); return; } setMode('wa'); tel.focus(); });
     bEm.addEventListener('click', function () { setMode('em'); email.focus(); });
     sel.addEventListener('change', sync); tel.addEventListener('input', sync);
 
@@ -251,7 +251,7 @@
     box.appendChild(hidWa);
     if (!phoneOnly) box.appendChild(hidPref);
     (lab || inp).replaceWith(box);
-    sync(); setMode('wa');
+    sync(); setMode(phoneOnly ? 'wa' : 'em');
 
     var form = box.closest('form'); var send = form && form.querySelector('button.np-send');
     if (form && send) form.addEventListener('click', function (ev) {
