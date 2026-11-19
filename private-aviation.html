@@ -60,6 +60,14 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 @media (max-width:760px){.np-pad{padding:72px 20px!important}.np-padb{padding:0 20px 72px!important}.np-nav{padding:16px 20px!important}.np-hero{min-height:88svh!important}.np-hero2{min-height:78svh!important}.np-h1s{font-size:32px!important;line-height:1.15!important}.np-h2{font-size:26px!important;line-height:1.25!important}.np-h2b{font-size:23px!important;line-height:1.3!important}.np-cities{font-size:20px!important;column-gap:16px!important;row-gap:12px!important}.np-num{font-size:36px!important}.np-lead{font-size:19px!important}.np-form{grid-template-columns:minmax(0,1fr)!important}.np-card{padding:32px 24px!important}.np-svcimg{aspect-ratio:3/2!important}.np-links-home{display:none!important}.np-burger{display:inline-flex}.np-links{gap:14px!important;font-size:12px!important;letter-spacing:.08em!important}.wa-float{width:58px!important;height:58px!important;right:16px!important;bottom:86px!important}.ig-float{width:58px!important;height:58px!important;right:16px!important;bottom:16px!important}.ig-float svg{width:36px;height:36px}.wa-float svg{width:34px;height:34px}}
 @media (min-width:761px) and (max-width:1100px){.np-links-home{gap:22px!important;font-size:13px!important}.np-h2{font-size:32px!important}.np-h1s{font-size:44px!important}}
 .np-kind{display:contents}.np-kind[hidden],#np-menu[hidden]{display:none!important}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-item{border-bottom:1px solid #262522}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;min-height:44px;font-family:'Cinzel',serif;font-size:17px;letter-spacing:.06em;font-weight:500;color:#FFFFFF;transition:color .3s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:300;font-size:28px;line-height:1;color:#CDB07A;transition:transform .4s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:#CDB07A}
+.faq-body{margin:0;padding:0 0 30px;max-width:760px;font-size:19px;line-height:1.6;color:#BDB9B1;animation:faqIn .5s ease both}
 </style>
 <script type="application/ld+json">
 {
@@ -116,6 +124,36 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       "mainEntityOfPage": {
         "@id": "https://nonstop-private.com/private-aviation.html#webpage"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nonstop-private.com/private-aviation.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How far ahead should I book a private jet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A few days is usually comfortable, and some flights can be arranged within hours. For peak dates and big events, book as early as possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an empty leg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A flight where the aircraft repositions without passengers. When your dates and route match, it can be booked at a much lower cost, with less flexibility on timing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we fly with our pet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, pets usually travel in the cabin on a private jet, subject to the rules of the destination country. We check the requirements before departure."
+          }
+        }
+      ]
     }
   ]
 }
@@ -204,6 +242,17 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       <div class="np-item" style="border: 1px solid #262522; padding: 32px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Cinzel', serif; font-size: 20px; color: #CDB07A">06</span><h3 style="margin: 0; font-family: 'Cinzel', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">Door to door</h3><p style="margin: 0; font-size: 19px; line-height: 1.6; color: #BDB9B1">A chauffeur waiting at both ends, luggage handled.</p></div>
     </div>
   </section>
+
+    <section class="np-pad" style="max-width: 820px; margin: 0 auto; padding: 20px 32px 100px; display: flex; flex-direction: column; gap: 26px">
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Which aircraft for your trip</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Light jets for short flights with a few passengers, such as Nice to Geneva or Paris to London. Midsize and super midsize jets for longer routes across Europe, with more space and a full cabin. Long range jets for intercontinental trips, such as Paris to Dubai or London to New York, with a bed and a crew to look after you.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">How quickly can you fly</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Often within a few hours, depending on the aircraft available and the airports. For high season and big events, such as the Monaco Grand Prix, the Cannes Film Festival or the winter holidays, book as early as you can.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Helicopters for the last miles</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">From Nice to Saint-Tropez or Monaco, from Geneva to Courchevel, or between the islands: a helicopter saves hours of traffic and lands as close as possible to your villa, your hotel or your yacht.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Questions about private jet charter</h2>
+      <div><details class="faq-item"><summary>How far ahead should I book a private jet?</summary><p class="faq-body">A few days is usually comfortable, and some flights can be arranged within hours. For peak dates and big events, book as early as possible.</p></details><details class="faq-item"><summary>What is an empty leg?</summary><p class="faq-body">A flight where the aircraft repositions without passengers. When your dates and route match, it can be booked at a much lower cost, with less flexibility on timing.</p></details><details class="faq-item"><summary>Can we fly with our pet?</summary><p class="faq-body">Yes, pets usually travel in the cabin on a private jet, subject to the rules of the destination country. We check the requirements before departure.</p></details></div>
+    </section>
 
   <section id="request" style="background: #0E0D0B; border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 110px 32px; display: flex; flex-wrap: wrap; gap: 64px">
