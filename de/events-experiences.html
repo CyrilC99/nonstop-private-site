@@ -61,6 +61,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 @media (max-width:760px){.np-pad{padding:72px 20px!important}.np-padb{padding:0 20px 72px!important}.np-nav{padding:16px 20px!important}.np-hero{min-height:88svh!important}.np-hero2{min-height:78svh!important}.np-h1s{font-size:32px!important;line-height:1.15!important}.np-h2{font-size:26px!important;line-height:1.25!important}.np-h2b{font-size:23px!important;line-height:1.3!important}.np-cities{font-size:20px!important;column-gap:16px!important;row-gap:12px!important}.np-num{font-size:36px!important}.np-lead{font-size:19px!important}.np-form{grid-template-columns:minmax(0,1fr)!important}.np-card{padding:32px 24px!important}.np-svcimg{aspect-ratio:3/2!important}.np-links-home{display:none!important}.np-burger{display:inline-flex}.np-links{gap:14px!important;font-size:12px!important;letter-spacing:.08em!important}.wa-float{width:58px!important;height:58px!important;right:16px!important;bottom:86px!important}.ig-float{width:58px!important;height:58px!important;right:16px!important;bottom:16px!important}.ig-float svg{width:36px;height:36px}.wa-float svg{width:34px;height:34px}}
 @media (min-width:761px) and (max-width:1100px){.np-links-home{gap:22px!important;font-size:13px!important}.np-h2{font-size:32px!important}.np-h1s{font-size:44px!important}}
 .np-kind{display:contents}.np-kind[hidden],#np-menu[hidden]{display:none!important}
+
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-item{border-bottom:1px solid #262522}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;min-height:44px;font-family:'Cinzel',serif;font-size:17px;letter-spacing:.06em;font-weight:500;color:#FFFFFF;transition:color .3s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:300;font-size:28px;line-height:1;color:#CDB07A;transition:transform .4s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:#CDB07A}
+.faq-body{margin:0;padding:0 0 30px;max-width:760px;font-size:19px;line-height:1.6;color:#BDB9B1;animation:faqIn .5s ease both}
 </style>
 <script type="application/ld+json">
 {
@@ -117,6 +126,44 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       "mainEntityOfPage": {
         "@id": "https://nonstop-private.com/de/events-experiences.html#webpage"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nonstop-private.com/de/events-experiences.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie früh sollte man eine private Feier planen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für eine private Feier in der Hochsaison genügen einige Wochen. Für eine Hochzeit oder ein großes Fest mehrere Monate. Für eine eilige Überraschung schreiben Sie uns trotzdem: Oft gelingt es in wenigen Tagen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bekommen Sie Karten für ausverkaufte Events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oft ja, über offizielle Hospitality Pakete und unsere Partner. Wir arbeiten nur mit seriösen Quellen und sagen Ihnen klar, was möglich ist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Organisieren Sie Heiratsanträge und Überraschungen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Ort, Zeitpunkt, Blumen, Musik, Fotograf und das Dinner danach, diskret inszeniert bis ins kleinste Detail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Können Sie einen DJ oder Künstler für ein privates Event buchen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Vom Resident DJ bis zur Liveband oder einem bekannten Künstler, je nach Verfügbarkeit. Wir übernehmen Buchung, Technik und Logistik."
+          }
+        }
+      ]
     }
   ]
 }
@@ -212,6 +259,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       <div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="abu-dhabi-grand-prix.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Grand Prix von Abu Dhabi · Dezember</a><a href="experiences-dubai.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Dubai</a><a href="new-years-eve-dubai.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Silvester in Dubai · 31. Dezember</a><a href="monaco-grand-prix.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Grand Prix von Monaco · Juni</a><a href="cannes-film-festival.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Filmfestspiele von Cannes · Mai</a><a href="art-basel-miami-beach.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Art Basel Miami Beach · Dezember</a></div>
     </section>
     <!-- /LANDING-LINKS -->
+
+    <section class="np-pad" style="max-width: 820px; margin: 0 auto; padding: 20px 32px 100px; display: flex; flex-direction: column; gap: 26px">
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Wie wir ein privates Event planen</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Alles beginnt mit einem Gespräch: Anlass, Gästezahl, Stimmung und Datum. Wir melden uns mit einem Vorschlag für den Ort, einem klaren Budget und einem Zeitplan und kümmern uns um alle Dienstleister, von Musik und Dekoration bis zu Catering und Sicherheit. Am Tag selbst ist unser Team vor Ort, damit Sie Gast auf Ihrem eigenen Fest sind.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Die großen Termine des Jahres</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Manche Wochen müssen Monate im Voraus geplant werden: die <a href="cannes-film-festival.html" style="color: #CDB07A">Filmfestspiele von Cannes</a> im Mai, der <a href="monaco-grand-prix.html" style="color: #CDB07A">Grand Prix von Monaco</a>, <a href="art-basel-miami-beach.html" style="color: #CDB07A">Art Basel Miami Beach</a> und der <a href="abu-dhabi-grand-prix.html" style="color: #CDB07A">Grand Prix von Abu Dhabi</a> im Dezember sowie <a href="new-years-eve-dubai.html" style="color: #CDB07A">Silvester in Dubai</a>. Sagen Sie uns früh Bescheid, und wir sichern Aufenthalt, Zugang und Tische zusammen.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Fragen zu Events und Erlebnissen</h2>
+      <div><details class="faq-item"><summary>Wie früh sollte man eine private Feier planen?</summary><p class="faq-body">Für eine private Feier in der Hochsaison genügen einige Wochen. Für eine Hochzeit oder ein großes Fest mehrere Monate. Für eine eilige Überraschung schreiben Sie uns trotzdem: Oft gelingt es in wenigen Tagen.</p></details><details class="faq-item"><summary>Bekommen Sie Karten für ausverkaufte Events?</summary><p class="faq-body">Oft ja, über offizielle Hospitality Pakete und unsere Partner. Wir arbeiten nur mit seriösen Quellen und sagen Ihnen klar, was möglich ist.</p></details><details class="faq-item"><summary>Organisieren Sie Heiratsanträge und Überraschungen?</summary><p class="faq-body">Ja. Ort, Zeitpunkt, Blumen, Musik, Fotograf und das Dinner danach, diskret inszeniert bis ins kleinste Detail.</p></details><details class="faq-item"><summary>Können Sie einen DJ oder Künstler für ein privates Event buchen?</summary><p class="faq-body">Ja. Vom Resident DJ bis zur Liveband oder einem bekannten Künstler, je nach Verfügbarkeit. Wir übernehmen Buchung, Technik und Logistik.</p></details></div>
+    </section>
 
   <section id="request" style="background: #0E0D0B; border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 110px 32px; display: flex; flex-wrap: wrap; gap: 64px">

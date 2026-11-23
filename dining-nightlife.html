@@ -60,6 +60,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 @media (max-width:760px){.np-pad{padding:72px 20px!important}.np-padb{padding:0 20px 72px!important}.np-nav{padding:16px 20px!important}.np-hero{min-height:88svh!important}.np-hero2{min-height:78svh!important}.np-h1s{font-size:32px!important;line-height:1.15!important}.np-h2{font-size:26px!important;line-height:1.25!important}.np-h2b{font-size:23px!important;line-height:1.3!important}.np-cities{font-size:20px!important;column-gap:16px!important;row-gap:12px!important}.np-num{font-size:36px!important}.np-lead{font-size:19px!important}.np-form{grid-template-columns:minmax(0,1fr)!important}.np-card{padding:32px 24px!important}.np-svcimg{aspect-ratio:3/2!important}.np-links-home{display:none!important}.np-burger{display:inline-flex}.np-links{gap:14px!important;font-size:12px!important;letter-spacing:.08em!important}.wa-float{width:58px!important;height:58px!important;right:16px!important;bottom:86px!important}.ig-float{width:58px!important;height:58px!important;right:16px!important;bottom:16px!important}.ig-float svg{width:36px;height:36px}.wa-float svg{width:34px;height:34px}}
 @media (min-width:761px) and (max-width:1100px){.np-links-home{gap:22px!important;font-size:13px!important}.np-h2{font-size:32px!important}.np-h1s{font-size:44px!important}}
 .np-kind{display:contents}.np-kind[hidden],#np-menu[hidden]{display:none!important}
+
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-item{border-bottom:1px solid #262522}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;min-height:44px;font-family:'Cinzel',serif;font-size:17px;letter-spacing:.06em;font-weight:500;color:#FFFFFF;transition:color .3s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:300;font-size:28px;line-height:1;color:#CDB07A;transition:transform .4s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:#CDB07A}
+.faq-body{margin:0;padding:0 0 30px;max-width:760px;font-size:19px;line-height:1.6;color:#BDB9B1;animation:faqIn .5s ease both}
 </style>
 <script type="application/ld+json">
 {
@@ -116,6 +125,44 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       "mainEntityOfPage": {
         "@id": "https://nonstop-private.com/dining-nightlife.html#webpage"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nonstop-private.com/dining-nightlife.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you get a table at a fully booked restaurant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Very often, yes. Our relationships with restaurants let us find tables that are no longer available online. When the place you want is truly full, we suggest an equivalent address of the same level."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far in advance should I book a club table?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In high season, a few days ahead is ideal, and earlier for special nights or big guest DJs. For tonight, write to us anyway: last minute tables are part of our daily work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a minimum spend for club tables?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most clubs set a minimum spend per table, which depends on the night and the position. We confirm it with you in writing before booking, so there are no surprises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you send a private chef to our villa or yacht?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A chef for one dinner or for the whole stay, with a menu designed around your tastes and any dietary needs."
+          }
+        }
+      ]
     }
   ]
 }
@@ -211,6 +258,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       <div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="restaurants-dubai.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Dubai · Restaurants</a><a href="beach-clubs-dubai.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Dubai · Beach clubs</a><a href="beach-clubs-mykonos.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Mykonos · Beach clubs</a><a href="restaurants-mykonos.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Mykonos · Restaurants</a><a href="nightclubs-mykonos.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Mykonos · Nightclubs</a><a href="nightclubs-dubai.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Dubai · Nightclubs</a><a href="restaurants-courchevel.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Courchevel · Restaurants</a><a href="nightclubs-courchevel.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Courchevel · Nightlife</a><a href="beach-clubs-saint-tropez.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">French Riviera · Beach clubs</a><a href="restaurants-saint-tropez.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">French Riviera · Restaurants</a><a href="nightclubs-saint-tropez.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">French Riviera · Nightlife</a><a href="beach-clubs-ibiza.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Ibiza · Beach clubs</a><a href="restaurants-ibiza.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Ibiza · Restaurants</a><a href="nightclubs-ibiza.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Ibiza · Nightlife</a></div>
     </section>
     <!-- /LANDING-LINKS -->
+
+    <section class="np-pad" style="max-width: 820px; margin: 0 auto; padding: 20px 32px 100px; display: flex; flex-direction: column; gap: 26px">
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">How a table is secured</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Most of the tables that matter are never shown online. We book directly with the restaurant or the club, confirm the time, the position and the minimum spend if there is one, and send you a clear summary before anything is final. On the night, your name is at the door.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">From dinner to the last song</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">A great evening is a sequence: dinner at the right hour, a short drive, the table already set in the club, the driver waiting outside at the end. We plan the whole night as one, in <a href="dubai.html" style="color: #CDB07A">Dubai</a>, <a href="mykonos.html" style="color: #CDB07A">Mykonos</a>, <a href="ibiza.html" style="color: #CDB07A">Ibiza</a>, <a href="nightclubs-saint-tropez.html" style="color: #CDB07A">Saint Tropez</a> or <a href="courchevel.html" style="color: #CDB07A">Courchevel</a>.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Questions about dining and nightlife</h2>
+      <div><details class="faq-item"><summary>Can you get a table at a fully booked restaurant?</summary><p class="faq-body">Very often, yes. Our relationships with restaurants let us find tables that are no longer available online. When the place you want is truly full, we suggest an equivalent address of the same level.</p></details><details class="faq-item"><summary>How far in advance should I book a club table?</summary><p class="faq-body">In high season, a few days ahead is ideal, and earlier for special nights or big guest DJs. For tonight, write to us anyway: last minute tables are part of our daily work.</p></details><details class="faq-item"><summary>Is there a minimum spend for club tables?</summary><p class="faq-body">Most clubs set a minimum spend per table, which depends on the night and the position. We confirm it with you in writing before booking, so there are no surprises.</p></details><details class="faq-item"><summary>Can you send a private chef to our villa or yacht?</summary><p class="faq-body">Yes. A chef for one dinner or for the whole stay, with a menu designed around your tastes and any dietary needs.</p></details></div>
+    </section>
 
   <section id="request" style="background: #0E0D0B; border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 110px 32px; display: flex; flex-wrap: wrap; gap: 64px">

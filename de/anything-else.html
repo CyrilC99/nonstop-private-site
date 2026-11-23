@@ -60,6 +60,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 @media (max-width:760px){.np-pad{padding:72px 20px!important}.np-padb{padding:0 20px 72px!important}.np-nav{padding:16px 20px!important}.np-hero{min-height:88svh!important}.np-hero2{min-height:78svh!important}.np-h1s{font-size:32px!important;line-height:1.15!important}.np-h2{font-size:26px!important;line-height:1.25!important}.np-h2b{font-size:23px!important;line-height:1.3!important}.np-cities{font-size:20px!important;column-gap:16px!important;row-gap:12px!important}.np-num{font-size:36px!important}.np-lead{font-size:19px!important}.np-form{grid-template-columns:minmax(0,1fr)!important}.np-card{padding:32px 24px!important}.np-svcimg{aspect-ratio:3/2!important}.np-links-home{display:none!important}.np-burger{display:inline-flex}.np-links{gap:14px!important;font-size:12px!important;letter-spacing:.08em!important}.wa-float{width:58px!important;height:58px!important;right:16px!important;bottom:86px!important}.ig-float{width:58px!important;height:58px!important;right:16px!important;bottom:16px!important}.ig-float svg{width:36px;height:36px}.wa-float svg{width:34px;height:34px}}
 @media (min-width:761px) and (max-width:1100px){.np-links-home{gap:22px!important;font-size:13px!important}.np-h2{font-size:32px!important}.np-h1s{font-size:44px!important}}
 .np-kind{display:contents}.np-kind[hidden],#np-menu[hidden]{display:none!important}
+
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-item{border-bottom:1px solid #262522}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;min-height:44px;font-family:'Cinzel',serif;font-size:17px;letter-spacing:.06em;font-weight:500;color:#FFFFFF;transition:color .3s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:300;font-size:28px;line-height:1;color:#CDB07A;transition:transform .4s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:#CDB07A}
+.faq-body{margin:0;padding:0 0 30px;max-width:760px;font-size:19px;line-height:1.6;color:#BDB9B1;animation:faqIn .5s ease both}
 </style>
 <script type="application/ld+json">
 {
@@ -116,6 +125,44 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       "mainEntityOfPage": {
         "@id": "https://nonstop-private.com/de/anything-else.html#webpage"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nonstop-private.com/de/anything-else.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welche Art von Anfragen nehmen Sie an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alles, was legal und machbar ist: Reiseplanung, Wellness, Kinder, Haustiere, geschäftliche Logistik und ungewöhnliche Ideen, die in keine Schublade passen. Wenn wir es nicht können, sagen wir es sofort."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell antworten Sie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Meist innerhalb einer Stunde, Tag und Nacht. Bei dringenden Anfragen erreichen Sie uns am schnellsten per WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Unterzeichnen Sie eine Vertraulichkeitsvereinbarung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Wir können vor der ersten Anfrage eine Vertraulichkeitsvereinbarung unterzeichnen, und Diskretion gilt ohnehin für jede Anfrage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Brauche ich eine Mitgliedschaft für eine Anfrage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Sie können jederzeit eine einzelne Anfrage stellen. Die Mitgliedschaft richtet sich an alle, die das ganze Jahr einen persönlichen Ansprechpartner möchten."
+          }
+        }
+      ]
     }
   ]
 }
@@ -204,6 +251,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       <div class="np-item" style="border: 1px solid #262522; padding: 32px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Cinzel', serif; font-size: 20px; color: #CDB07A">06</span><h3 style="margin: 0; font-family: 'Cinzel', serif; font-weight: 500; font-size: 16px; letter-spacing: 0.08em">Das Unmögliche</h3><p style="margin: 0; font-size: 19px; line-height: 1.6; color: #BDB9B1">Sagen Sie es uns. Wir sagen Ihnen ehrlich, was wir tun können.</p></div>
     </div>
   </section>
+
+    <section class="np-pad" style="max-width: 820px; margin: 0 auto; padding: 20px 32px 100px; display: flex; flex-direction: column; gap: 26px">
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Wie eine Anfrage bearbeitet wird</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Sie schreiben uns per Nachricht oder Mail, in Ihren eigenen Worten. Ein echter Mensch liest sie, stellt die wichtigen Fragen und meldet sich mit Optionen und einem klaren Angebot. Nichts wird ohne Ihre Zustimmung gebucht, und derselbe Ansprechpartner begleitet Ihre Anfrage bis zum Schluss.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Diskretion als Regel</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Was immer Sie fragen, es bleibt unter uns. Wir können vor der ersten Anfrage eine Vertraulichkeitsvereinbarung unterzeichnen und geben jedem Partner nur weiter, was er für seinen Teil wissen muss.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Fragen zu besonderen Wünschen</h2>
+      <div><details class="faq-item"><summary>Welche Art von Anfragen nehmen Sie an?</summary><p class="faq-body">Alles, was legal und machbar ist: Reiseplanung, Wellness, Kinder, Haustiere, geschäftliche Logistik und ungewöhnliche Ideen, die in keine Schublade passen. Wenn wir es nicht können, sagen wir es sofort.</p></details><details class="faq-item"><summary>Wie schnell antworten Sie?</summary><p class="faq-body">Meist innerhalb einer Stunde, Tag und Nacht. Bei dringenden Anfragen erreichen Sie uns am schnellsten per WhatsApp.</p></details><details class="faq-item"><summary>Unterzeichnen Sie eine Vertraulichkeitsvereinbarung?</summary><p class="faq-body">Ja. Wir können vor der ersten Anfrage eine Vertraulichkeitsvereinbarung unterzeichnen, und Diskretion gilt ohnehin für jede Anfrage.</p></details><details class="faq-item"><summary>Brauche ich eine Mitgliedschaft für eine Anfrage?</summary><p class="faq-body">Nein. Sie können jederzeit eine einzelne Anfrage stellen. Die <a href="membership.html" style="color: #CDB07A">Mitgliedschaft</a> richtet sich an alle, die das ganze Jahr einen persönlichen Ansprechpartner möchten.</p></details></div>
+    </section>
 
   <section id="request" style="background: #0E0D0B; border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 110px 32px; display: flex; flex-wrap: wrap; gap: 64px">
