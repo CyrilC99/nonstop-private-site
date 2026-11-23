@@ -62,6 +62,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 @media (min-width:761px) and (max-width:1100px){.np-links-home{gap:22px!important;font-size:13px!important}.np-h2{font-size:32px!important}.np-h1s{font-size:44px!important}}
 .svc-box{border:1px solid #262522;background:#0B0B0A;transition:border-color .5s ease,background .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}.svc-box:hover,.svc-box:focus-visible{border-color:#CDB07A;background:#11100E;transform:translateY(-4px)}.svc-go{color:#CDB07A;transition:letter-spacing .4s ease}.svc-box:hover .svc-go{letter-spacing:.2em}
 .np-kind{display:contents}.np-kind[hidden],#np-menu[hidden]{display:none!important}
+
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-item{border-bottom:1px solid #262522}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;min-height:44px;font-family:'Cinzel',serif;font-size:17px;letter-spacing:.06em;font-weight:500;color:#FFFFFF;transition:color .3s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:300;font-size:28px;line-height:1;color:#CDB07A;transition:transform .4s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:#CDB07A}
+.faq-body{margin:0;padding:0 0 30px;max-width:760px;font-size:19px;line-height:1.6;color:#BDB9B1;animation:faqIn .5s ease both}
 </style>
 <script type="application/ld+json">
 {
@@ -157,6 +166,44 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
           "position": 8,
           "name": "Alles andere",
           "url": "https://nonstop-private.com/de/anything-else.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nonstop-private.com/de/services.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Können Sie mehrere Leistungen in einer Reise kombinieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, das können wir am besten. Erzählen Sie uns die ganze Reise, und wir organisieren Unterkunft, Transport, Tische, Aktivitäten und Events als einen abgestimmten Plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Übernehmen Sie Anfragen in letzter Minute?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Ein Tisch für heute Abend, ein Fahrer in einer Stunde oder eine Yacht für morgen: Schreiben Sie uns, und wir finden die beste verfügbare Option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Arbeiten Sie für Unternehmen und private Events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Teamreisen, Kundenbetreuung, Produktlaunches und private Feiern, mit einem persönlichen Ansprechpartner und einem klaren Angebot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es etwas, das Sie nicht organisieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir organisieren nur, was legal und sicher ist. In diesem Rahmen finden wir einen Weg, wenn etwas machbar ist, und sagen es Ihnen sofort, wenn nicht."
+          }
         }
       ]
     }
@@ -292,6 +339,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
           </div>
         </a>
       </div>
+    </section>
+
+    <section class="np-pad" style="max-width: 820px; margin: 0 auto; padding: 20px 32px 100px; display: flex; flex-direction: column; gap: 26px">
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Ein Ansprechpartner für die ganze Reise</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Die meisten Anfragen betreffen mehrere Leistungen zugleich: die Villa, den Fahrer am Flughafen, den Tisch am ersten Abend, die Yacht am Wochenende. Wir behandeln sie als einen Plan, damit alles zusammenpasst und Sie nur mit einer Person sprechen.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Wo wir den größten Unterschied machen</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">In <a href="dubai.html" style="color: #CDB07A">Dubai</a>, <a href="mykonos.html" style="color: #CDB07A">Mykonos</a>, an der <a href="french-riviera.html" style="color: #CDB07A">Côte d’Azur</a>, auf <a href="ibiza.html" style="color: #CDB07A">Ibiza</a> und in <a href="courchevel.html" style="color: #CDB07A">Courchevel</a>, wo wir während der Saison vor Ort sind. Anderswo ermöglicht uns unser Partnernetzwerk denselben Service, von der <a href="private-aviation.html" style="color: #CDB07A">Privatfliegerei</a> bis zu <a href="yachting.html" style="color: #CDB07A">Yachten</a> und <a href="villas-hotels.html" style="color: #CDB07A">Villen</a>.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Fragen zu unseren Leistungen</h2>
+      <div><details class="faq-item"><summary>Können Sie mehrere Leistungen in einer Reise kombinieren?</summary><p class="faq-body">Ja, das können wir am besten. Erzählen Sie uns die ganze Reise, und wir organisieren Unterkunft, Transport, Tische, Aktivitäten und Events als einen abgestimmten Plan.</p></details><details class="faq-item"><summary>Übernehmen Sie Anfragen in letzter Minute?</summary><p class="faq-body">Ja. Ein Tisch für heute Abend, ein Fahrer in einer Stunde oder eine Yacht für morgen: Schreiben Sie uns, und wir finden die beste verfügbare Option.</p></details><details class="faq-item"><summary>Arbeiten Sie für Unternehmen und private Events?</summary><p class="faq-body">Ja. Teamreisen, Kundenbetreuung, Produktlaunches und private Feiern, mit einem persönlichen Ansprechpartner und einem klaren Angebot.</p></details><details class="faq-item"><summary>Gibt es etwas, das Sie nicht organisieren?</summary><p class="faq-body">Wir organisieren nur, was legal und sicher ist. In diesem Rahmen finden wir einen Weg, wenn etwas machbar ist, und sagen es Ihnen sofort, wenn nicht.</p></details></div>
     </section>
 
     <section style="background: #0E0D0B; border-top: 1px solid #262522; border-bottom: none">
