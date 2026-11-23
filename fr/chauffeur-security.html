@@ -61,6 +61,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 @media (max-width:760px){.np-pad{padding:72px 20px!important}.np-padb{padding:0 20px 72px!important}.np-nav{padding:16px 20px!important}.np-hero{min-height:88svh!important}.np-hero2{min-height:78svh!important}.np-h1s{font-size:32px!important;line-height:1.15!important}.np-h2{font-size:26px!important;line-height:1.25!important}.np-h2b{font-size:23px!important;line-height:1.3!important}.np-cities{font-size:20px!important;column-gap:16px!important;row-gap:12px!important}.np-num{font-size:36px!important}.np-lead{font-size:19px!important}.np-form{grid-template-columns:minmax(0,1fr)!important}.np-card{padding:32px 24px!important}.np-svcimg{aspect-ratio:3/2!important}.np-links-home{display:none!important}.np-burger{display:inline-flex}.np-links{gap:14px!important;font-size:12px!important;letter-spacing:.08em!important}.wa-float{width:58px!important;height:58px!important;right:16px!important;bottom:86px!important}.ig-float{width:58px!important;height:58px!important;right:16px!important;bottom:16px!important}.ig-float svg{width:36px;height:36px}.wa-float svg{width:34px;height:34px}}
 @media (min-width:761px) and (max-width:1100px){.np-links-home{gap:22px!important;font-size:13px!important}.np-h2{font-size:32px!important}.np-h1s{font-size:44px!important}}
 .np-kind{display:contents}.np-kind[hidden],#np-menu[hidden]{display:none!important}
+
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-item{border-bottom:1px solid #262522}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;min-height:44px;font-family:'Cinzel',serif;font-size:17px;letter-spacing:.06em;font-weight:500;color:#FFFFFF;transition:color .3s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:300;font-size:28px;line-height:1;color:#CDB07A;transition:transform .4s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:#CDB07A}
+.faq-body{margin:0;padding:0 0 30px;max-width:760px;font-size:19px;line-height:1.6;color:#BDB9B1;animation:faqIn .5s ease both}
 </style>
 <script type="application/ld+json">
 {
@@ -117,6 +126,44 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       "mainEntityOfPage": {
         "@id": "https://nonstop-private.com/fr/chauffeur-security.html#webpage"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nonstop-private.com/fr/chauffeur-security.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vos chauffeurs attendent-ils à l’arrivée avec une pancarte ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Votre chauffeur suit votre vol, vous attend à l’arrivée ou au terminal privé, s’occupe de vos bagages et vous conduit directement à destination."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je garder le même chauffeur pendant tout le séjour ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Un chauffeur dédié peut rester avec vous de l’arrivée au départ, à l’heure, à la journée ou pour tout le voyage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vos agents de protection rapprochée sont-ils agréés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Nous travaillons uniquement avec des agents agréés et expérimentés, conformément aux règles de chaque pays. La confidentialité fait partie de chaque mission."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Organisez-vous aussi la sécurité d’événements privés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Contrôle des invités à l’entrée, protection sur place et coordination avec l’équipe de l’événement, pour les villas, les yachts et les soirées privées."
+          }
+        }
+      ]
     }
   ]
 }
@@ -212,6 +259,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
       <div style="display: flex; flex-wrap: wrap; gap: 12px"><a href="private-driver-mykonos.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Mykonos</a><a href="private-driver-courchevel.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Courchevel</a><a href="luxury-car-rental-dubai.html" style="border: 1px solid #3A3833; padding: 12px 20px; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.12em; color: #EDEAE4">Dubaï</a></div>
     </section>
     <!-- /LANDING-LINKS -->
+
+    <section class="np-pad" style="max-width: 820px; margin: 0 auto; padding: 20px 32px 100px; display: flex; flex-direction: column; gap: 26px">
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Qui vous conduit</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Nos chauffeurs sont des professionnels, titulaires des licences de transport de personnes là où la loi l’exige, qui connaissent la ville, parlent votre langue ou l’anglais et savent rester discrets. Le véhicule est choisi selon l’occasion : une berline discrète pour les affaires, un grand SUV pour la famille et les bagages, un cabriolet pour la côte.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">La protection rapprochée, quand elle est nécessaire</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Pour les personnalités, les familles exposées ou les situations sensibles, nous travaillons avec des agents de protection rapprochée agréés. Chaque mission commence par une courte analyse de votre programme, pour que le niveau de protection corresponde au besoin réel, ni plus visible ni moins efficace qu’il ne faut.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Vos questions sur les chauffeurs et la sécurité</h2>
+      <div><details class="faq-item"><summary>Vos chauffeurs attendent-ils à l’arrivée avec une pancarte&nbsp;?</summary><p class="faq-body">Oui. Votre chauffeur suit votre vol, vous attend à l’arrivée ou au terminal privé, s’occupe de vos bagages et vous conduit directement à destination.</p></details><details class="faq-item"><summary>Puis-je garder le même chauffeur pendant tout le séjour&nbsp;?</summary><p class="faq-body">Oui. Un chauffeur dédié peut rester avec vous de l’arrivée au départ, à l’heure, à la journée ou pour tout le voyage.</p></details><details class="faq-item"><summary>Vos agents de protection rapprochée sont-ils agréés&nbsp;?</summary><p class="faq-body">Oui. Nous travaillons uniquement avec des agents agréés et expérimentés, conformément aux règles de chaque pays. La confidentialité fait partie de chaque mission.</p></details><details class="faq-item"><summary>Organisez-vous aussi la sécurité d’événements privés&nbsp;?</summary><p class="faq-body">Oui. Contrôle des invités à l’entrée, protection sur place et coordination avec l’équipe de l’événement, pour les villas, les yachts et les soirées privées.</p></details></div>
+    </section>
 
   <section id="request" style="background: #0E0D0B; border-top: 1px solid #262522">
     <div class="np-pad" style="max-width: 1240px; margin: 0 auto; padding: 110px 32px; display: flex; flex-wrap: wrap; gap: 64px">
