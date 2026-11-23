@@ -61,6 +61,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
 @media (min-width:761px) and (max-width:1100px){.np-links-home{gap:22px!important;font-size:13px!important}.np-h2{font-size:32px!important}.np-h1s{font-size:44px!important}}
 .svc-box{border:1px solid #262522;background:#0B0B0A;transition:border-color .5s ease,background .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}.svc-box:hover,.svc-box:focus-visible{border-color:#CDB07A;background:#11100E;transform:translateY(-4px)}.svc-go{color:#CDB07A;transition:letter-spacing .4s ease}.svc-box:hover .svc-go{letter-spacing:.2em}
 .np-kind{display:contents}.np-kind[hidden],#np-menu[hidden]{display:none!important}
+
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-item{border-bottom:1px solid #262522}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;min-height:44px;font-family:'Cinzel',serif;font-size:17px;letter-spacing:.06em;font-weight:500;color:#FFFFFF;transition:color .3s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-weight:300;font-size:28px;line-height:1;color:#CDB07A;transition:transform .4s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:#CDB07A}
+.faq-body{margin:0;padding:0 0 30px;max-width:760px;font-size:19px;line-height:1.6;color:#BDB9B1;animation:faqIn .5s ease both}
 </style>
 <script type="application/ld+json">
 {
@@ -156,6 +165,44 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
           "position": 8,
           "name": "Anything else",
           "url": "https://nonstop-private.com/anything-else.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nonstop-private.com/services.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you combine several services in one trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, that is what we do best. Tell us the whole trip and we organise accommodation, transport, tables, activities and events as one coordinated plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle last minute requests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A table for tonight, a driver in an hour or a yacht for tomorrow: write to us and we find the best available option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work for companies and private events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Team trips, client hospitality, product launches and private celebrations, with a dedicated contact and one clear quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there anything you do not arrange?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We only arrange what is legal and safe. Within that, if something can be done, we find a way, and if it cannot, we tell you straight away."
+          }
         }
       ]
     }
@@ -291,6 +338,15 @@ input[type=date],input[type=datetime-local]{color-scheme:dark;font-family:'Cinze
           </div>
         </a>
       </div>
+    </section>
+
+    <section class="np-pad" style="max-width: 820px; margin: 0 auto; padding: 20px 32px 100px; display: flex; flex-direction: column; gap: 26px">
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">One contact for the whole trip</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">Most requests touch several services at once: the villa, the driver who meets you at the airport, the table on the first night, the yacht at the weekend. We handle them as one plan, so every part fits with the others and you only ever speak to one person.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Where we make the biggest difference</h2>
+      <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #BDB9B1">In <a href="dubai.html" style="color: #CDB07A">Dubai</a>, <a href="mykonos.html" style="color: #CDB07A">Mykonos</a>, <a href="french-riviera.html" style="color: #CDB07A">Saint Tropez</a>, <a href="ibiza.html" style="color: #CDB07A">Ibiza</a> and <a href="courchevel.html" style="color: #CDB07A">Courchevel</a>, where we are on the ground during the season. Elsewhere, our network of partners lets us arrange the same level of service, from <a href="private-aviation.html" style="color: #CDB07A">private aviation</a> to <a href="yachting.html" style="color: #CDB07A">yachts</a> and <a href="villas-hotels.html" style="color: #CDB07A">villas</a>.</p>
+      <h2 class="np-h2b" style="margin: 0; font-family: 'Cinzel', serif; font-weight: 400; font-size: 28px; line-height: 1.3; letter-spacing: 0.04em; margin-top: 34px">Questions about our services</h2>
+      <div><details class="faq-item"><summary>Can you combine several services in one trip?</summary><p class="faq-body">Yes, that is what we do best. Tell us the whole trip and we organise accommodation, transport, tables, activities and events as one coordinated plan.</p></details><details class="faq-item"><summary>Do you handle last minute requests?</summary><p class="faq-body">Yes. A table for tonight, a driver in an hour or a yacht for tomorrow: write to us and we find the best available option.</p></details><details class="faq-item"><summary>Do you work for companies and private events?</summary><p class="faq-body">Yes. Team trips, client hospitality, product launches and private celebrations, with a dedicated contact and one clear quote.</p></details><details class="faq-item"><summary>Is there anything you do not arrange?</summary><p class="faq-body">We only arrange what is legal and safe. Within that, if something can be done, we find a way, and if it cannot, we tell you straight away.</p></details></div>
     </section>
 
     <section style="background: #0E0D0B; border-top: 1px solid #262522; border-bottom: none">
